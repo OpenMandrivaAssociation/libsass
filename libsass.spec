@@ -4,12 +4,12 @@
 
 Summary:	C/C++ port of the Sass CSS precompiler
 Name:		libsass
-Version:	3.5.4
-Release:	2
+Version:	3.5.5
+Release:	1
 License:	MIT
 Group:		System/Libraries
 Url:		http://sass-lang.com/libsass
-Source0:	https://github.com/sass/libsass/archive/%{name}-%{version}.tar.gz
+Source0:	https://github.com/sass/libsass/archive/%{version}.tar.gz
 
 %description
 Libsass is a C/C++ port of the Sass CSS precompiler. The original
@@ -58,14 +58,13 @@ support files required for developing applications against %{name}.
 #----------------------------------------------------------------------------
 
 %prep
-%setup -q
+%autosetup -p1
 export LIBSASS_VERSION=%{version}
 autoreconf --force --install
 
 %build
-%configure2_5x \
-	--disable-static
-%make
+%configure
+%make_build
 
 %install
-%makeinstall_std
+%make_install
