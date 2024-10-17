@@ -8,7 +8,7 @@ Version:	3.6.5
 Release:	2
 License:	MIT
 Group:		System/Libraries
-Url:		http://sass-lang.com/libsass
+Url:		https://sass-lang.com/libsass
 Source0:	https://github.com/sass/libsass/archive/%{name}-%{version}.tar.gz
 
 %description
