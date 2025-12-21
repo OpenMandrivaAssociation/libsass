@@ -11,6 +11,11 @@ Group:		System/Libraries
 Url:		https://sass-lang.com/libsass
 Source0:	https://github.com/sass/libsass/archive/%{name}-%{version}.tar.gz
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 %description
 Libsass is a C/C++ port of the Sass CSS precompiler. The original
 version was written in Ruby, but this version is meant for
